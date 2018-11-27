@@ -19,7 +19,7 @@ namespace AsyncViewModelTest
 
             await Task.Delay(3000);
 
-            LoadItemsCommand?.Execute(null);
+            //LoadItemsCommand?.Execute(null);
 
             Console.WriteLine("VM Loaded!");
         }
