@@ -6,7 +6,7 @@ using System.Windows.Input;
 
 namespace AsyncViewModelTest
 {
-    public abstract class ViewModelBase : INotifyPropertyChanged, IAsyncInitialization
+    public abstract class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected Dictionary<string, string> vmparams = new Dictionary<string, string>();

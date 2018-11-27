@@ -7,7 +7,7 @@ namespace AsyncViewModelTest
 {
     public class TestViewModel : ViewModelBase
     {
-        public TestViewModel() : base()
+        public TestViewModel()
         {
             // Required to initialize this viewmodel
             Initialization = InitializeAsync();

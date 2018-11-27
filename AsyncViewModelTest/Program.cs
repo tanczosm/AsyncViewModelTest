@@ -7,11 +7,24 @@ namespace AsyncViewModelTest
     {
         static void Main(string[] args)
         {
-            TestViewModel vm = new TestViewModel();
-            TestViewModel vm2 = new TestViewModel();
-            TestViewModel vm3 = new TestViewModel();
+            TestViewModel vm, vm2, vm3;
 
-            //Task.WaitAll(vm.Initialization, vm2.Initialization, vm3.Initialization);
+            // Fire off 3 async methods
+            Task.Run(async () => {
+                vm = new TestViewModel();
+                await vm.Initialization;
+            });
+
+            Task.Run(async () => {
+                vm2 = new TestViewModel();
+                await vm2.Initialization;
+            });
+
+            Task.Run(async () => {
+                vm3 = new TestViewModel();
+                await vm3.Initialization;
+            });
+
 
             Console.WriteLine("<Busy waiting...>");
             Console.ReadKey();
